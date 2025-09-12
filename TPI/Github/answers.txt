@@ -1,0 +1,23 @@
+1. Cosa è Github?
+
+Github è una piattaforma per l'hosting di progetti software controllata dalla Microsoft.
+Il nome deriva dal fatto che il tutto è un implementazione di Git.
+Git è un un sistema di versioning creato da Linus Torvalds per lo sviluppo del kernel linux.
+Successivamente il tool si è diffuso, diventando essenziale per ogni progetto informatico.
+
+2. Cosa significa Versioning?
+
+Il versioning è un processo di gestione delle versioni di un progetto.
+Il processo è molto usato in informatica per tracciare tutte le modifiche e ripristinare vecchie versioni
+
+3. Cosa significa fare un commit?
+
+Fare un commit significa salvare le proprie modifiche ai file di progetto all'interno della repostery.
+
+4. Cosa significa Fork e Branch?
+
+Un Fork in Git significa effettuare una copia completa di un repository sul proprio account.
+Questa è una funzione usata soprattutto nei progetti open source per cui non si ha accesso ma si vuole cercare di contribuire o testare. (es. Linux distros)
+Un branch è invece una funzione di git che crea un ramo di lavoro separato dall'interno della repository.
+Questa è usata per modificare una funzionalità senza compromettere il codice originale e per lavorare su diverse funzionalità in contempranea.
+La branch viene poi integrata nel codice originale con una pull request.
