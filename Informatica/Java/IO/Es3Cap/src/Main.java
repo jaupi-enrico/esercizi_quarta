@@ -8,7 +8,7 @@ public class Main {
         for (int i = 0; i < str.length(); i++) {
             char lettera = str.charAt(str.length() - i - 1);
 
-            str2= str2.concat("" + lettera);
+            str2 = str2.concat("" + lettera);
         }
         System.out.println(str2);
     }
