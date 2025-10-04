@@ -1,0 +1,38 @@
+Cosa facciamo?
+Piattaforma gestione eventi
+
+13 User stories (Excel tabella)
+
+Figma (Mockup e Wireframe)
+
+Trello
+
+Documento
+
+Gestione personale progetto
+
+Stakeholder
+
+Obiettvi:
+- Risultati da raggiungere
+- Come presentare
+- Istruzioni di esecuzione
+- Analisi concorrenza
+- Prioritizzazione
+- Repository Github
+- Presentare e comunicare il sito
+- Valutazione fattibilità
+
+Multipiattaforma
+
+Commentare il lavoro svolto (pop up)
+
+Tecnologie da usare:
+Api in node
+React in front end
+Database in postegres
+2fa
+Criptare dati
+Drag and drop
+
+Scadenza = 24/10/2025
