@@ -19,7 +19,11 @@ public class Dado {
         this.faccieDado = dadoCopia.faccieDado;
     }
 
-    public int Lancia(){
+    public int getFaccieDado() {
+        return faccieDado;
+    }
+
+    public int lancia(){
         return (int) (Math.random() * 10 % this.faccieDado + 1);
     }
 
