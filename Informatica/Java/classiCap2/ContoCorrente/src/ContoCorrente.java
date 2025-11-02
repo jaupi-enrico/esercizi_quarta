@@ -1,5 +1,6 @@
 import java.time.Instant;
 import java.time.LocalDate;
+import java.time.ZoneId;
 
 public class ContoCorrente {
     private String nome;
@@ -58,23 +59,30 @@ public class ContoCorrente {
     }
 
     public int getNumeroOperazioni() {
-        return attuale;
+        int count = 0;
+        for (int i = 0; i < attuale; i++) {
+            if (eseguita[i]) {
+                count++;
+            }
+        }
+        return count;
     }
 
 
 
     public Operazione[] getPrelievi() {
         int count = 0;
-        for (int i = 0; i < getNumeroOperazioni(); i++) {
+        for (int i = 0; i < attuale; i++) {
             if(operazioni[i].isPrelievo() && eseguita[i]) {
                 count++;
             }
         }
         Operazione[] filter = new Operazione[count];
         int attuale = 0;
-        for (int i = 0; i < getNumeroOperazioni(); i++) {
+        for (int i = 0; i < this.attuale; i++) {
             if(operazioni[i].isPrelievo() && eseguita[i]) {
                 filter[attuale] = operazioni[i];
+                attuale++;
             }
         }
         return filter;
@@ -82,16 +90,17 @@ public class ContoCorrente {
 
     public Operazione[] getDepositi() {
         int count = 0;
-        for (int i = 0; i < getNumeroOperazioni(); i++) {
+        for (int i = 0; i < attuale; i++) {
             if(operazioni[i].isDeposito()) {
                 count++;
             }
         }
         Operazione[] filter = new Operazione[count];
         int attuale = 0;
-        for (int i = 0; i < getNumeroOperazioni(); i++) {
+        for (int i = 0; i < this.attuale; i++) {
             if(operazioni[i].isDeposito()) {
                 filter[attuale] = operazioni[i];
+                attuale++;
             }
         }
         return filter;
@@ -99,16 +108,17 @@ public class ContoCorrente {
 
     public Operazione[] getOperazioniImportanti() {
         int count = 0;
-        for (int i = 0; i < getNumeroOperazioni(); i++) {
+        for (int i = 0; i < attuale; i++) {
             if(operazioni[i].getImporto() > 100) {
                 count++;
             }
         }
         Operazione[] filter = new Operazione[count];
         int attuale = 0;
-        for (int i = 0; i < getNumeroOperazioni(); i++) {
+        for (int i = 0; i < this.attuale; i++) {
             if(operazioni[i].getImporto() > 100) {
                 filter[attuale] = operazioni[i];
+                attuale++;
             }
         }
         return filter;
@@ -116,36 +126,72 @@ public class ContoCorrente {
 
     public Operazione[] getOperazioniNonEseguite() {
         int count = 0;
-        for (int i = 0; i < getNumeroOperazioni(); i++) {
+        for (int i = 0; i < attuale; i++) {
             if(!eseguita[i]) {
                 count++;
             }
         }
         Operazione[] filter = new Operazione[count];
         int attuale = 0;
-        for (int i = 0; i < getNumeroOperazioni(); i++) {
+        for (int i = 0; i < this.attuale; i++) {
             if(!eseguita[i]) {
                 filter[attuale] = operazioni[i];
+                attuale++;
             }
         }
         return filter;
     }
 
     public Operazione[] getOperazioniMese(int mese) {
+        if (mese < 1 || mese > 12) {
+            return new Operazione[0];
+        }
         int count = 0;
 
-        for (int i = 0; i < getNumeroOperazioni(); i++) {
-            if(operazioni[i].getIstante().isAfter() && i) {
+        for (int i = 0; i < attuale; i++) {
+            LocalDate data = LocalDate.ofInstant(operazioni[i].getIstante(), ZoneId.systemDefault());
+            if (data.getMonthValue() == mese && eseguita[i]) {
                 count++;
             }
         }
         Operazione[] filter = new Operazione[count];
         int attuale = 0;
-        for (int i = 0; i < getNumeroOperazioni(); i++) {
-            if(!eseguita[i]) {
+        for (int i = 0; i < this.attuale; i++) {
+            LocalDate data = LocalDate.ofInstant(operazioni[i].getIstante(), ZoneId.systemDefault());
+            if(data.getMonthValue() == mese && eseguita[i]) {
                 filter[attuale] = operazioni[i];
+                attuale++;
             }
         }
         return filter;
+    }
+
+    public Operazione[] getOperazioniAnno(int anno) {
+        int count = 0;
+
+        for (int i = 0; i < attuale; i++) {
+            LocalDate data = LocalDate.ofInstant(operazioni[i].getIstante(), ZoneId.systemDefault());
+            if (data.getYear() == anno && eseguita[i]) {
+                count++;
+            }
+        }
+        Operazione[] filter = new Operazione[count];
+        int attuale = 0;
+        for (int i = 0; i < this.attuale; i++) {
+            LocalDate data = LocalDate.ofInstant(operazioni[i].getIstante(), ZoneId.systemDefault());
+            if(data.getYear() == anno && eseguita[i]) {
+                filter[attuale] = operazioni[i];
+                attuale++;
+            }
+        }
+        return filter;
+    }
+
+    @Override
+    public String toString() {
+        String s = "Conto di " + getNominativo() + " (codice " + getCodice() + ")\n";
+        s += "Saldo attuale: " + getSaldo() + "\n";
+        s += "Operazioni totali: " + attuale + " (eseguite: " + getNumeroOperazioni() + ")";
+        return s;
     }
 }

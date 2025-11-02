@@ -1,4 +1,6 @@
 import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 
 public class Operazione {
     private double importo;
@@ -40,7 +42,8 @@ public class Operazione {
 
     @Override
     public String toString() {
-        String s = "Deposito di " + importo + "€, effettuato il " + data + ", con la seguente causale:\n";
+        LocalDateTime ldt = LocalDateTime.ofInstant(data, ZoneId.systemDefault());
+        String s = "Deposito di " + importo + "€, effettuato il " + ldt.toLocalDate() + " alle ore " + ldt.toLocalTime() + ", con la seguente causale:\n";
         s += causale;
         return s;
     }
