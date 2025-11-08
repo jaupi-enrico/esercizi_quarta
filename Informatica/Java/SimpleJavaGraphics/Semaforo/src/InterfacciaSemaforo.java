@@ -63,9 +63,15 @@ public class InterfacciaSemaforo {
     public void toggleSemaforo() {
         if (s.isAcceso()) {
             spegniSemaforo();
+            s.spegni();
         }
         else {
             accendiSemaforo();
+            s.accendi();
         }
+    }
+
+    public void eliminaSemaforo() {
+        Canvas.close();
     }
 }
