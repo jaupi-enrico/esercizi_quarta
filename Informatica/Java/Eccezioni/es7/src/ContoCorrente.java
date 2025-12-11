@@ -19,7 +19,19 @@ public class ContoCorrente {
         this.attuale = 0;
     }
 
-    public void eseguiOperazione(Operazione o) {
+    static class OperazioneNotValidEException extends Exception {
+        private Operazione operazione;
+        public OperazioneNotValidEException(Operazione o) {
+            operazione = o;
+        }
+
+        @Override
+        public String toString() {
+            return "L'operazione non e' valida: " + operazione;
+        }
+    }
+
+    public void eseguiOperazione(Operazione o) throws OperazioneNotValidEException {
         boolean eseguita;
         if (o.isPrelievo() && o.getImporto() <= saldo) {
             saldo -= o.getImporto();
@@ -30,7 +42,7 @@ public class ContoCorrente {
             eseguita = true;
         }
         else {
-            eseguita = false;
+            throw new OperazioneNotValidEException(o);
         }
 
         operazioni[attuale] = o;
