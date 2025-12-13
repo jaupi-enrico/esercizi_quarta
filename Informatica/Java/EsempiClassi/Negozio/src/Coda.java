@@ -18,7 +18,7 @@ public class Coda {
         if (clt == null) {
             return;
         }
-        if (clt.getCodiceTessera().isEmpty()) {
+        if (clt.getCodiceTessera() == null) {
             clt.setTessera("0000", 0);
         }
         clt.addPunti(clt.getCarrello().paga());
