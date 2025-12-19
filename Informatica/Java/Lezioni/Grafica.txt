@@ -1,0 +1,17 @@
+Passaggi intelilj
+
+1) proxy
+2) fiddler
+3) cartella .m2 nella root di account
+4) crea settings.xml nella cartella
+metti:
+<settings>
+	<proxies>
+		<proxy>
+			<protocol>https</protocol>
+			<host>localhost</host>
+			<port>8888</port>
+		</proxy>
+	</proxies>
+</settings>
+5)Installa scenebuilder
