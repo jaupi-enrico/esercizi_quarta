@@ -1,0 +1,2 @@
+F1.xlsx
+C:\Users\78313537\Documents\Knime\test\AI\F1\data

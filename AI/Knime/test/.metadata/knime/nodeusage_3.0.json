@@ -1,0 +1,130 @@
+{
+    "version": "5.5.0.v202506251332",
+    "created": "2025-12-19 15:13",
+    "nodestats": {
+        "nodes": [
+            {
+                "id": "org.knime.base.node.io.filehandling.csv.reader.CSVTableReaderNodeFactory",
+                "nodename": "CSV Reader",
+                "nrexecs": 1,
+                "nrfails": 0,
+                "exectime": 159,
+                "nrcreated": 0,
+                "nrsettingsChanged": 0,
+                "successor": "n/a",
+                "successornodename": "n/a"
+            },
+            {
+                "id": "org.knime.base.node.preproc.filter.column.DataColumnSpecFilterNodeFactory",
+                "nodename": "Column Filter",
+                "nrexecs": 2,
+                "nrfails": 0,
+                "exectime": 3,
+                "nrcreated": 1,
+                "nrsettingsChanged": 1,
+                "successor": "n/a",
+                "successornodename": "n/a"
+            },
+            {
+                "id": "org.knime.base.node.preproc.filter.row3.RowFilterNodeFactory",
+                "nodename": "Row Filter",
+                "nrexecs": 2,
+                "nrfails": 0,
+                "exectime": 128,
+                "nrcreated": 1,
+                "nrsettingsChanged": 1,
+                "successor": "org.knime.base.node.preproc.filter.column.DataColumnSpecFilterNodeFactory",
+                "successornodename": "Column Filter"
+            },
+            {
+                "id": "org.knime.base.node.preproc.duplicates.DuplicateRowFilterNodeFactory",
+                "nodename": "Duplicate Row Filter",
+                "nrexecs": 1,
+                "nrfails": 0,
+                "exectime": 30,
+                "nrcreated": 0,
+                "nrsettingsChanged": 0,
+                "successor": "n/a",
+                "successornodename": "n/a"
+            },
+            {
+                "id": "org.knime.base.views.node.stackedareachart.StackedAreaChartNodeFactory",
+                "nodename": "Stacked Area Chart",
+                "nrexecs": 1,
+                "nrfails": 0,
+                "exectime": 11,
+                "nrcreated": 0,
+                "nrsettingsChanged": 0,
+                "successor": "n/a",
+                "successornodename": "n/a"
+            },
+            {
+                "id": "org.knime.base.views.node.piechart.PieChartNodeFactory",
+                "nodename": "Pie Chart",
+                "nrexecs": 1,
+                "nrfails": 0,
+                "exectime": 120,
+                "nrcreated": 0,
+                "nrsettingsChanged": 0,
+                "successor": "n/a",
+                "successornodename": "n/a"
+            },
+            {
+                "id": "org.knime.base.node.io.filehandling.csv.reader.FileReaderNodeFactory",
+                "nodename": "File Reader",
+                "nrexecs": 0,
+                "nrfails": 0,
+                "exectime": 0,
+                "nrcreated": 1,
+                "nrsettingsChanged": 0,
+                "successor": "n/a",
+                "successornodename": "n/a"
+            },
+            {
+                "id": "org.knime.base.node.preproc.autobinner.apply.AutoBinnerApplyNodeFactory",
+                "nodename": "Auto-Binner (Apply)",
+                "nrexecs": 0,
+                "nrfails": 0,
+                "exectime": 0,
+                "nrcreated": 1,
+                "nrsettingsChanged": 0,
+                "successor": "n/a",
+                "successornodename": "n/a"
+            },
+            {
+                "id": "org.knime.ext.poi3.node.io.filehandling.excel.reader.ExcelTableReaderNodeFactory",
+                "nodename": "Excel Reader",
+                "nrexecs": 1,
+                "nrfails": 0,
+                "exectime": 3536,
+                "nrcreated": 1,
+                "nrsettingsChanged": 1,
+                "successor": "org.knime.base.node.preproc.filter.row3.RowFilterNodeFactory",
+                "successornodename": "Row Filter"
+            }
+        ],
+        "metaNodes": {
+        },
+        "wrappedNodes": {
+        },
+        "createdVia": {
+            "JAVA_UI": 5
+        }
+    },
+    "uptime": 1847602,
+    "workflowsOpened": 7,
+    "remoteWorkflowsOpened": 0,
+    "workflowsCreated": 0,
+    "remoteWorkflowsCreated": 0,
+    "columnarStorageWorkflowsOpened": 0,
+    "workflowsImported": 0,
+    "workflowsExported": 0,
+    "webUIPerspectiveSwitches": 0,
+    "javaUIPerspectiveSwitches": 1,
+    "lastUsedPerspective": "none (classic)",
+    "launches": 1,
+    "lastApplicationID": "org.knime.product.KNIME_APPLICATION",
+    "timeSinceLastStart": 1847602,
+    "crashes": 0,
+    "properlyShutDown": true
+}

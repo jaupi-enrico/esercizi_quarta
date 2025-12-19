@@ -1,0 +1,278 @@
+2025-12-19 16:13:00,564 : INFO  : main :  : NodeLogger :  :  : #########################################################################################
+2025-12-19 16:13:00,564 : INFO  : main :  : NodeLogger :  :  : #                                                                                       #
+2025-12-19 16:13:00,564 : INFO  : main :  : NodeLogger :  :  : # Welcome to KNIME Analytics Platform v5.5.0.v202506251332 (Build July 02, 2025)        #
+2025-12-19 16:13:00,564 : INFO  : main :  : NodeLogger :  :  : # Based on Eclipse, http://www.eclipse.org                                              #
+2025-12-19 16:13:00,564 : INFO  : main :  : NodeLogger :  :  : #                                                                                       #
+2025-12-19 16:13:00,564 : INFO  : main :  : NodeLogger :  :  : #########################################################################################
+2025-12-19 16:13:00,564 : INFO  : main :  : NodeLogger :  :  : #                                                                                       #
+2025-12-19 16:13:00,564 : INFO  : main :  : NodeLogger :  :  : # Copyright by KNIME AG, Zurich, Switzerland and others.                                #
+2025-12-19 16:13:00,564 : INFO  : main :  : NodeLogger :  :  : # Website: http://www.knime.com                                                         #
+2025-12-19 16:13:00,564 : INFO  : main :  : NodeLogger :  :  : # E-mail: contact@knime.com                                                             #
+2025-12-19 16:13:00,564 : INFO  : main :  : NodeLogger :  :  : #                                                                                       #
+2025-12-19 16:13:00,564 : INFO  : main :  : NodeLogger :  :  : #########################################################################################
+2025-12-19 16:13:00,564 : INFO  : main :  : NodeLogger :  :  : # For more details see the KNIME log file:                                              #
+2025-12-19 16:13:00,564 : INFO  : main :  : NodeLogger :  :  : # C:\Users\78313537\Documents\Knime\test\.metadata\knime\knime.log
+2025-12-19 16:13:00,564 : INFO  : main :  : NodeLogger :  :  : #---------------------------------------------------------------------------------------#
+2025-12-19 16:13:00,580 : INFO  : main :  : NodeLogger :  :  : # logging date=ven dic 19 16:13:00 CET 2025
+2025-12-19 16:13:00,580 : INFO  : main :  : NodeLogger :  :  : # java.version=17.0.5
+2025-12-19 16:13:00,580 : INFO  : main :  : NodeLogger :  :  : # java.vm.version=17.0.5+8
+2025-12-19 16:13:00,580 : INFO  : main :  : NodeLogger :  :  : # java.vendor=Eclipse Adoptium
+2025-12-19 16:13:00,580 : INFO  : main :  : NodeLogger :  :  : # os.name=Windows 11
+2025-12-19 16:13:00,580 : INFO  : main :  : NodeLogger :  :  : # os.arch=amd64
+2025-12-19 16:13:00,580 : INFO  : main :  : NodeLogger :  :  : # number of CPUs=12
+2025-12-19 16:13:00,580 : INFO  : main :  : NodeLogger :  :  : # assertions=off
+2025-12-19 16:13:00,580 : INFO  : main :  : NodeLogger :  :  : # host=Info09PC21
+2025-12-19 16:13:00,593 : INFO  : main :  : NodeLogger :  :  : # username=78313537
+2025-12-19 16:13:00,593 : INFO  : main :  : NodeLogger :  :  : # max mem=7840MB
+2025-12-19 16:13:00,593 : INFO  : main :  : NodeLogger :  :  : # application=org.knime.product.KNIME_APPLICATION
+2025-12-19 16:13:00,651 : INFO  : main :  : NodeLogger :  :  : # KNID=11-1dffb52d970e5dbd-01-1d11b2e31572f219
+2025-12-19 16:13:00,651 : INFO  : main :  : NodeLogger :  :  : #########################################################################################
+2025-12-19 16:13:00,651 : DEBUG : main :  : KNIMELogger :  :  : 13 messages were logged before logging was initialized; see below...
+2025-12-19 16:11:25,266 : DEBUG : main :  : EclipseProxyServiceInitializer :  :  : (1/3) Opened OSGi service tracker for 'org.eclipse.core.net.proxy.IProxyService'
+2025-12-19 16:11:25,345 : DEBUG : main :  : ApplicationHealth :  :  : Registering JMX bean for org.knime.core:type=Execution,name=GlobalPool
+2025-12-19 16:11:25,345 : DEBUG : main :  : ApplicationHealth :  :  : Registering JMX bean for org.knime.core:type=Execution,name=NodeStates
+2025-12-19 16:11:25,345 : DEBUG : main :  : ApplicationHealth :  :  : Registering JMX bean for org.knime.core:type=Memory,name=ObjectInstances
+2025-12-19 16:11:25,361 : DEBUG : main :  : IEarlyStartup :  :  : Running application "org.knime.product.KNIME_APPLICATION"
+2025-12-19 16:11:25,361 : DEBUG : main :  : IEarlyStartup :  :  : Moving from stage <none> to stage EARLIEST
+2025-12-19 16:11:25,361 : DEBUG : main :  : IEarlyStartup :  :  : Executing startup hook `org.knime.core.node.logging.JavaUtilLoggingAdapter#run()` at stage EARLIEST
+2025-12-19 16:11:25,361 : DEBUG : main :  : IEarlyStartup :  :  : Executing startup hook `org.knime.js.cef.CEFEarlyStartup#run()` at stage EARLIEST
+2025-12-19 16:11:25,698 : DEBUG : main :  : KNIMEApplication :  :  : Checking for instance location
+2025-12-19 16:13:00,406 : DEBUG : main :  : KNIMEApplication :  :  : Instance location set
+2025-12-19 16:13:00,464 : DEBUG : main :  : IEarlyStartup :  :  : Moving from stage EARLIEST to stage AFTER_PROFILES_SET
+2025-12-19 16:13:00,464 : DEBUG : main :  : IEarlyStartup :  :  : Executing startup hook `com.knime.gateway.executor.websocket.GatewayWebSocketServerEarlyStartup#run()` at stage AFTER_PROFILES_SET
+2025-12-19 16:13:00,479 : DEBUG : main :  : IEarlyStartup :  :  : Executing startup hook `org.knime.core.node.logging.KNIMELogger$EarlyStartupInitializer#run()` at stage AFTER_PROFILES_SET
+2025-12-19 16:13:00,658 : DEBUG : main :  : KNIMELogger :  :  : End of buffered log messages
+2025-12-19 16:13:00,658 : DEBUG : main :  : IEarlyStartup :  :  : Executing startup hook `org.knime.core.eclipseUtil.EclipseProxyServiceInitializer#run()` at stage AFTER_PROFILES_SET
+2025-12-19 16:13:01,204 : DEBUG : main :  : NativeProxyProviderWrapper :  :  : Invoked default constructor in class "class org.eclipse.core.internal.net.ProxyManager" via reflectionto forcibly create new instance
+2025-12-19 16:13:01,204 : DEBUG : main :  : NativeProxyProviderWrapper :  :  : Forcibly set field "preferenceManager" in class "class org.eclipse.core.internal.net.ProxyManager" to "org.eclipse.core.internal.net.PreferenceManager@c7443f" via reflection
+2025-12-19 16:13:01,214 : DEBUG : main :  : NativeProxyProviderWrapper :  :  : Forcibly set field "nativeProxyProvider" in class "class org.eclipse.core.internal.net.ProxyManager" to "org.knime.core.eclipseUtil.NativeProxyProviderWrapper@192ecf8" via reflection
+2025-12-19 16:13:01,214 : DEBUG : main :  : EclipseProxyServiceInitializer :  :  : (3/3) Successfully installed proxy support
+2025-12-19 16:13:01,214 : DEBUG : main :  : EclipseProxyServiceInitializer :  :  : (2/3) Initialized OSGi service 'org.eclipse.core.net.proxy.IProxyService'
+2025-12-19 16:13:01,214 : DEBUG : main :  : IEarlyStartup :  :  : Executing startup hook `org.knime.core.internal.MountTableInitializerEarlyStartup#run()` at stage AFTER_PROFILES_SET
+2025-12-19 16:13:02,094 : DEBUG : main :  : WorkbenchMountTable :  :  : Mounted Explorer Temp Space 'knime-temp-space' - com.knime.explorer.tempspace
+2025-12-19 16:13:02,106 : DEBUG : main :  : IEarlyStartup :  :  : Executing startup hook `org.knime.ui.java.OnEarlyStartup#run()` at stage AFTER_PROFILES_SET
+2025-12-19 16:13:02,126 : DEBUG : KNIME-Worker-0 :  : NodeFactoryProvider :  :  : Duplicate node factory id: com.sjwebb.knime.slack.nodes.users.get.GetUsersNodeFactory
+2025-12-19 16:13:02,132 : DEBUG : KNIME-Worker-0 :  : NodeFactoryProvider :  :  : Duplicate node factory id: org.knime.base.filehandling.filemetainfo.FileMetaInfoNodeFactory
+2025-12-19 16:13:02,132 : DEBUG : KNIME-Worker-0 :  : NodeFactoryProvider :  :  : Duplicate node factory id: org.knime.base.node.preproc.filter.column.FilterColumnNodeFactory
+2025-12-19 16:13:02,132 : DEBUG : KNIME-Worker-0 :  : NodeFactoryProvider :  :  : Duplicate node factory id: org.knime.base.node.preproc.joiner.NewJoinerNodeFactory
+2025-12-19 16:13:02,135 : DEBUG : KNIME-Worker-0 :  : NodeFactoryProvider :  :  : Duplicate node factory id: org.knime.base.node.preproc.split.SplitNodeFactory
+2025-12-19 16:13:02,135 : DEBUG : KNIME-Worker-0 :  : NodeFactoryProvider :  :  : Duplicate node factory id: org.knime.distmatrix.knn.KnnDistNodeFactory
+2025-12-19 16:13:02,137 : DEBUG : KNIME-Worker-0 :  : NodeFactoryProvider :  :  : Duplicate node factory id: org.knime.ext.weka37.predictor.WekaPredictorNodeFactory
+2025-12-19 16:13:02,137 : DEBUG : KNIME-Worker-0 :  : NodeFactoryProvider :  :  : Collected NodeFactory extensions... found 2118 nodes (541 deprecated, 10 hidden) in 0,0s
+2025-12-19 16:13:02,287 : DEBUG : ForkJoinPool.commonPool-worker-8 :  : HadoopInitializer :  :  : Setting system property hadoop.home.dir to C:\Users\78313537\AppData\Local\Temp\hadoop_home_87781 (for Hadoop winutils).
+2025-12-19 16:13:02,354 : DEBUG : Thread-6 :  : CondaPreferences :  :  : Initializing default Conda installation directory with ''.
+2025-12-19 16:13:02,375 : DEBUG : Thread-6 :  : PythonKernelTester :  :  : An error occurred while testing the Python 2 installation.
+2025-12-19 16:13:02,375 : DEBUG : Thread-6 :  : PythonKernelTester :  :  : Could not start Python executable at the given location (no_conda_environment_selected\python.exe): Cannot run program "no_conda_environment_selected\python.exe": CreateProcess error=2, Impossibile trovare il file specificato
+2025-12-19 16:13:02,379 : DEBUG : Thread-6 :  : PythonKernelTester :  :  : An error occurred while testing the Python 3 installation.
+2025-12-19 16:13:02,379 : DEBUG : Thread-6 :  : PythonKernelTester :  :  : Could not start Python executable at the given location (no_conda_environment_selected\python.exe): Cannot run program "no_conda_environment_selected\python.exe": CreateProcess error=2, Impossibile trovare il file specificato
+2025-12-19 16:13:02,476 : INFO  : ForkJoinPool.commonPool-worker-7 :  : PythonExtensionParser :  :  : Trying to load cached extension 'graudata.mdh_extension_1.1.2.202506201009' from C:\Program Files\KNIME\configuration\graudata.mdh_extension
+2025-12-19 16:13:02,647 : INFO  : ForkJoinPool.commonPool-worker-7 :  : PythonExtensionParser :  :  : Trying to load cached extension 'org.knime.python.giskard_5.5.0.v202506221309' from C:\Program Files\KNIME\configuration\org.knime.python.giskard
+2025-12-19 16:13:02,680 : INFO  : ForkJoinPool.commonPool-worker-7 :  : PythonExtensionParser :  :  : Trying to load cached extension 'org.knime.python.google_ads_ext_5.5.0.v202506221313' from C:\Program Files\KNIME\configuration\org.knime.python.google_ads_ext
+2025-12-19 16:13:02,751 : INFO  : ForkJoinPool.commonPool-worker-7 :  : PythonExtensionParser :  :  : Trying to load cached extension 'org.knime.python.llm_5.5.0.v202506251651' from C:\Program Files\KNIME\configuration\org.knime.python.llm
+2025-12-19 16:13:02,891 : DEBUG : ForkJoinPool.commonPool-worker-8 :  : SparkProviderRegistry :  :  : Registering Spark provider class: org.knime.bigdata.spark.core.databricks.DatabricksNodeFactoryProvider from extension: org.knime.bigdata.databricks
+2025-12-19 16:13:02,900 : INFO  : ForkJoinPool.commonPool-worker-7 :  : PythonExtensionParser :  :  : Trying to load cached extension 'org.knime.python.presidio_5.5.0.v202506221309' from C:\Program Files\KNIME\configuration\org.knime.python.presidio
+2025-12-19 16:13:02,910 : DEBUG : ForkJoinPool.commonPool-worker-8 :  : SparkProviderRegistry :  :  : Registering Spark provider class: org.knime.bigdata.spark.core.livy.LivyNodeFactoryProvider from extension: org.knime.bigdata.spark.core.livy
+2025-12-19 16:13:02,917 : DEBUG : ForkJoinPool.commonPool-worker-8 :  : SparkProviderRegistry :  :  : Registering Spark provider class: org.knime.bigdata.spark.local.SparkLocalNodeFactoryProvider from extension: org.knime.bigdata.spark.local
+2025-12-19 16:13:02,923 : DEBUG : ForkJoinPool.commonPool-worker-8 :  : SparkProviderRegistry :  :  : Registering Spark provider class: org.knime.bigdata.spark.node.StandardSparkNodeFactoryProvider from extension: org.knime.bigdata.spark.node
+2025-12-19 16:13:02,923 : INFO  : ForkJoinPool.commonPool-worker-7 :  : PythonExtensionParser :  :  : Trying to load cached extension 'org.knime.python.sklearn_5.5.0.v202506221333' from C:\Program Files\KNIME\configuration\org.knime.python.sklearn
+2025-12-19 16:13:02,955 : INFO  : ForkJoinPool.commonPool-worker-7 :  : PythonExtensionParser :  :  : Trying to load cached extension 'org.knime.python.web_5.5.0.v202506241225' from C:\Program Files\KNIME\configuration\org.knime.python.web
+2025-12-19 16:13:02,986 : INFO  : ForkJoinPool.commonPool-worker-7 :  : PythonExtensionParser :  :  : Trying to load cached extension 'org.knime.timeseries-analysis_5.5.0.v202506051223' from C:\Program Files\KNIME\configuration\org.knime.timeseries-analysis
+2025-12-19 16:13:03,020 : INFO  : ForkJoinPool.commonPool-worker-7 :  : PythonExtensionParser :  :  : Trying to load cached extension 'sdl.harvard.geospatial_2.0.0.202507030816' from C:\Program Files\KNIME\configuration\sdl.harvard.geospatial
+2025-12-19 16:13:03,160 : DEBUG : ForkJoinPool.commonPool-worker-8 :  : SvgPluginActivator :  :  : Added SVG export option to node view class
+2025-12-19 16:13:04,525 : INFO  : main :  : StringHistory :  :  : History file 'C:\Users\78313537\Documents\Knime\test\.metadata\knime\history_database_drivers.txt' does not exist.
+2025-12-19 16:13:04,525 : INFO  : main :  : StringHistory :  :  : History file 'C:\Users\78313537\Documents\Knime\test\.metadata\knime\history_database_urls.txt' does not exist.
+2025-12-19 16:13:04,525 : DEBUG : main :  : DatabaseConnectionSettings :  :  : Settings database timeout to 15 seconds
+2025-12-19 16:13:04,527 : DEBUG : main :  : DatabaseConnectionSettings :  :  : Database concurrency (sync via database connection) is true.
+2025-12-19 16:13:04,527 : DEBUG : main :  : KNIMECorePlugin :  :  : Setting KNIME max thread count to 24
+2025-12-19 16:13:04,529 : DEBUG : main :  : KNIMECorePlugin :  :  : Setting KNIME temp dir to "C:\Users\78313537\AppData\Local\Temp"
+2025-12-19 16:13:09,131 : ERROR : ForkJoinPool.commonPool-worker-7 :  : WelcomeAPEndpoint :  :  : Calling welcome page endpoint failed:Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
+	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.base/java.net.Socket.connect(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(Unknown Source)
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(Unknown Source)
+	at org.knime.product.rcp.intro.WelcomeAPEndpoint.performRequest(WelcomeAPEndpoint.java:179)
+	at org.knime.product.rcp.intro.WelcomeAPEndpoint.requestCategories(WelcomeAPEndpoint.java:147)
+	at org.knime.product.rcp.intro.WelcomeAPEndpoint.lambda$0(WelcomeAPEndpoint.java:119)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(Unknown Source)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)
+2025-12-19 16:13:31,558 : WARN  : Worker-2: Downloading statistics for node recommendations. :  : NodeRecommendationUpdater :  :  : Could not update node recommendations statistics.
+jakarta.ws.rs.ProcessingException: java.net.SocketTimeoutException: SocketTimeoutException invoking https://update.knime.com/community_recommendations_5.2.json: Connect timed out
+	at org.apache.cxf.jaxrs.client.AbstractClient.checkClientException(AbstractClient.java:645)
+	at org.apache.cxf.jaxrs.client.AbstractClient.preProcessResult(AbstractClient.java:619)
+	at org.apache.cxf.jaxrs.client.WebClient.doResponse(WebClient.java:1149)
+	at org.apache.cxf.jaxrs.client.WebClient.doChainedInvocation(WebClient.java:1086)
+	at org.apache.cxf.jaxrs.client.WebClient.doInvoke(WebClient.java:931)
+	at org.apache.cxf.jaxrs.client.WebClient.doInvoke(WebClient.java:900)
+	at org.apache.cxf.jaxrs.client.WebClient.invoke(WebClient.java:460)
+	at org.apache.cxf.jaxrs.client.SyncInvokerImpl.method(SyncInvokerImpl.java:135)
+	at org.apache.cxf.jaxrs.client.SyncInvokerImpl.method(SyncInvokerImpl.java:130)
+	at org.apache.cxf.jaxrs.client.SyncInvokerImpl.get(SyncInvokerImpl.java:50)
+	at org.apache.cxf.jaxrs.client.spec.InvocationBuilderImpl.get(InvocationBuilderImpl.java:87)
+	at org.knime.workbench.workflowcoach.data.AbstractFileDownloadTripleProvider.update(AbstractFileDownloadTripleProvider.java:142)
+	at org.knime.workbench.workflowcoach.data.CommunityTripleProvider.update(CommunityTripleProvider.java:111)
+	at org.knime.workbench.workflowcoach.prefs.UpdateJob.run(UpdateJob.java:132)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.SocketTimeoutException: SocketTimeoutException invoking https://update.knime.com/community_recommendations_5.2.json: Connect timed out
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.mapException(HTTPConduit.java:1452)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.close(HTTPConduit.java:1433)
+	at org.apache.cxf.io.AbstractWrappedOutputStream.close(AbstractWrappedOutputStream.java:77)
+	at org.apache.cxf.transport.AbstractConduit.close(AbstractConduit.java:56)
+	at org.apache.cxf.transport.http.HTTPConduit.close(HTTPConduit.java:717)
+	at org.apache.cxf.transport.http.HttpClientHTTPConduit.close(HttpClientHTTPConduit.java:115)
+	at org.apache.cxf.interceptor.MessageSenderInterceptor$MessageSenderEndingInterceptor.handleMessage(MessageSenderInterceptor.java:63)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:307)
+	at org.apache.cxf.jaxrs.client.AbstractClient.doRunInterceptorChain(AbstractClient.java:717)
+	at org.apache.cxf.jaxrs.client.WebClient.doChainedInvocation(WebClient.java:1085)
+	... 11 more
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getChainedException(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.base/java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(Unknown Source)
+	at org.apache.cxf.transport.http.URLConnectionHTTPConduit$URLConnectionWrappedOutputStream$2.run(URLConnectionHTTPConduit.java:370)
+	at org.apache.cxf.transport.http.URLConnectionHTTPConduit$URLConnectionWrappedOutputStream$2.run(URLConnectionHTTPConduit.java:366)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at org.apache.cxf.transport.http.URLConnectionHTTPConduit$URLConnectionWrappedOutputStream.getResponseCode(URLConnectionHTTPConduit.java:366)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.processRetransmit(HTTPConduit.java:1503)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.handleRetransmits(HTTPConduit.java:1490)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.handleResponse(HTTPConduit.java:1621)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.close(HTTPConduit.java:1420)
+	... 19 more
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
+	at java.base/java.net.Socket.connect(Unknown Source)
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getHeaderFields(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getHeaderFields(Unknown Source)
+	at org.apache.cxf.transport.http.Headers.readFromConnection(Headers.java:280)
+	at org.apache.cxf.transport.http.URLConnectionHTTPConduit$URLConnectionWrappedOutputStream.updateCookiesBeforeRetransmit(URLConnectionHTTPConduit.java:330)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.handleRetransmits(HTTPConduit.java:1488)
+	... 21 more
+2025-12-19 16:18:55,718 : WARN  : main :  : Node : File Reader : 3:1 : Please specify a file
+2025-12-19 16:21:54,054 : WARN  : ModalContext :  : HubURIImporter :  :  : Hub request failed
+jakarta.ws.rs.ProcessingException: java.net.ConnectException: ConnectException invoking https://api.hub.knime.com/nodes/org.knime.base.node.preproc.colconvert.stringtonumber2.StringToNumber2NodeFactory?details=full: Connection timed out: no further information
+	at org.apache.cxf.jaxrs.client.AbstractClient.checkClientException(AbstractClient.java:645)
+	at org.apache.cxf.jaxrs.client.AbstractClient.preProcessResult(AbstractClient.java:619)
+	at org.apache.cxf.jaxrs.client.WebClient.doResponse(WebClient.java:1149)
+	at org.apache.cxf.jaxrs.client.WebClient.doChainedInvocation(WebClient.java:1086)
+	at org.apache.cxf.jaxrs.client.WebClient.doInvoke(WebClient.java:931)
+	at org.apache.cxf.jaxrs.client.WebClient.doInvoke(WebClient.java:900)
+	at org.apache.cxf.jaxrs.client.WebClient.invoke(WebClient.java:363)
+	at org.apache.cxf.jaxrs.client.WebClient.get(WebClient.java:389)
+	at com.knime.explorer.server.internal.HubURIImporter.callHubApi(HubURIImporter.java:885)
+	at com.knime.explorer.server.internal.HubURIImporter.callHubApi(HubURIImporter.java:864)
+	at com.knime.explorer.server.internal.HubURIImporter.createNodeImport(HubURIImporter.java:685)
+	at org.knime.workbench.core.imports.URIImporter.createEntityImport(URIImporter.java:83)
+	at org.knime.workbench.core.imports.URIImporter.createEntityImport(URIImporter.java:105)
+	at org.knime.workbench.core.imports.URIImporterFinder.createEntityImportFor(URIImporterFinder.java:118)
+	at org.knime.workbench.editor2.editparts.policy.NewWorkflowContainerEditPolicy.lambda$0(NewWorkflowContainerEditPolicy.java:210)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+Caused by: java.net.ConnectException: ConnectException invoking https://api.hub.knime.com/nodes/org.knime.base.node.preproc.colconvert.stringtonumber2.StringToNumber2NodeFactory?details=full: Connection timed out: no further information
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.mapException(HTTPConduit.java:1452)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.close(HTTPConduit.java:1433)
+	at org.apache.cxf.io.AbstractWrappedOutputStream.close(AbstractWrappedOutputStream.java:77)
+	at org.apache.cxf.transport.AbstractConduit.close(AbstractConduit.java:56)
+	at org.apache.cxf.transport.http.HTTPConduit.close(HTTPConduit.java:717)
+	at org.apache.cxf.transport.http.HttpClientHTTPConduit.close(HttpClientHTTPConduit.java:115)
+	at org.apache.cxf.interceptor.MessageSenderInterceptor$MessageSenderEndingInterceptor.handleMessage(MessageSenderInterceptor.java:63)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:307)
+	at org.apache.cxf.jaxrs.client.AbstractClient.doRunInterceptorChain(AbstractClient.java:717)
+	at org.apache.cxf.jaxrs.client.WebClient.doChainedInvocation(WebClient.java:1085)
+	... 12 more
+Caused by: java.net.ConnectException: Connection timed out: no further information
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getChainedException(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.base/java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(Unknown Source)
+	at org.apache.cxf.transport.http.URLConnectionHTTPConduit$URLConnectionWrappedOutputStream$2.run(URLConnectionHTTPConduit.java:370)
+	at org.apache.cxf.transport.http.URLConnectionHTTPConduit$URLConnectionWrappedOutputStream$2.run(URLConnectionHTTPConduit.java:366)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at org.apache.cxf.transport.http.URLConnectionHTTPConduit$URLConnectionWrappedOutputStream.getResponseCode(URLConnectionHTTPConduit.java:366)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.processRetransmit(HTTPConduit.java:1503)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.handleRetransmits(HTTPConduit.java:1490)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.handleResponse(HTTPConduit.java:1621)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.close(HTTPConduit.java:1420)
+	... 20 more
+Caused by: java.net.ConnectException: Connection timed out: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
+	at java.base/java.net.Socket.connect(Unknown Source)
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getHeaderFields(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getHeaderFields(Unknown Source)
+	at org.apache.cxf.transport.http.Headers.readFromConnection(Headers.java:280)
+	at org.apache.cxf.transport.http.URLConnectionHTTPConduit$URLConnectionWrappedOutputStream.updateCookiesBeforeRetransmit(URLConnectionHTTPConduit.java:330)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.handleRetransmits(HTTPConduit.java:1488)
+	... 22 more
+2025-12-19 16:22:26,356 : WARN  : main :  : ExplorerFileSystemUtils :  :  : At least one of the workflows affected by the operation is still open in the editor and has to be closed first.
+2025-12-19 16:22:27,673 : WARN  : main :  : LocalWorkspaceContentProvider :  :  : At least one of the workflows affected by the operation is still open in the editor and has to be closed first.
+2025-12-19 16:28:27,326 : WARN  : main :  : Node : Excel Reader : 3:1 : Please specify a file
+2025-12-19 16:35:22,703 : WARN  : main :  : Node : Row Filter : 3:2 : At least one filter criterion is needed.

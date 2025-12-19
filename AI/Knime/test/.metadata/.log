@@ -1,0 +1,18 @@
+!SESSION 2025-12-19 16:10:15.382 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2025-12-19 16:33:10.940
+!MESSAGE System property http.proxyHost is not set but should be 127.0.0.1.
+
+!ENTRY org.eclipse.core.net 1 0 2025-12-19 16:33:10.940
+!MESSAGE System property http.proxyPort is not set but should be 8888.
+
+!ENTRY org.eclipse.core.net 1 0 2025-12-19 16:33:10.949
+!MESSAGE System property https.proxyHost is not set but should be 127.0.0.1.
+
+!ENTRY org.eclipse.core.net 1 0 2025-12-19 16:33:10.950
+!MESSAGE System property https.proxyPort is not set but should be 8888.
