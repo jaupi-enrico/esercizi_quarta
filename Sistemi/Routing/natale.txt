@@ -1,0 +1,41 @@
+Rete di partenza: 200.200.200.0/16
+
+LAN SINISTRA = S1 (2000 host)
+
+Subnet: 200.200.200.0/21
+Subnet mask: 255.255.248.0
+Router (gateway): 200.200.207.254
+Host: 200.200.200.1 – 200.200.207.253
+Broadcast: 200.200.207.255
+
+
+LAN DESTRA = S2 (300 host)
+
+Subnet: 200.200.208.0/23
+Subnet mask: 255.255.254.0
+Router (gateway): 200.200.209.254
+Host: 200.200.208.1 – 200.200.209.253
+Broadcast: 200.200.209.255
+
+LAN IN BASSO = S3 (84 host)
+
+Subnet: 200.200.210.0/25
+Subnet mask: 255.255.255.128
+Router (gateway): 200.200.210.126
+Host: 200.200.210.1 – 200.200.210.125
+Broadcast: 200.200.210.127
+
+COLLEGAMENTO ROUTER - ROUTER
+
+Subnet: 200.200.210.128/30
+Subnet mask: 255.255.255.252
+Router0	= 
+Ip: 200.200.210.129
+Subnet mask: 255.255.255.252
+ip route 200.200.210.0 255.255.255.128 200.200.210.130
+
+Router1	=
+Ip: 200.200.210.130
+Subnet mask: 255.255.255.252
+ip route 200.200.200.0 255.255.248.0 200.200.210.129
+ip route 200.200.208.0 255.255.254.0 200.200.210.129
