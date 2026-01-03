@@ -1,0 +1,35 @@
+Quanti giocatori ci sono in una squadra di calcio in campo?
+9
+10
+11
+12
+2
+---
+In quale sport si usa una racchetta?
+Calcio
+Pallanuoto
+Tennis
+Basket
+2
+---
+Quanti quarti dura una partita di basket?
+2
+3
+4
+5
+2
+---
+In quale sport si assegna il pallone d’oro?
+Basket
+Calcio
+Rugby
+Formula 1
+1
+---
+In quale sport gareggia Charles Leclerc?
+MotoGP
+Rally
+Formula 1
+IndyCar
+2
+---
