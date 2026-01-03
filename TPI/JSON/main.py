@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 import folium
 
 
-os.environ["HTTP_PROXY"]  = "http://127.0.0.1:8888"
-os.environ["HTTPS_PROXY"] = "http://127.0.0.1:8888"
+#os.environ["HTTP_PROXY"]  = "http://127.0.0.1:8888"
+#os.environ["HTTPS_PROXY"] = "http://127.0.0.1:8888"
 
 
 url = "https://raw.githubusercontent.com/cristianst85/GeoNuclearData/master/data/json/denormalized/nuclear_power_plants.json"
@@ -24,7 +24,10 @@ def elenca_operativi(datas):
 
 def percentuale_operativi(datas):
     tot = len(datas)
-    op = sum(1 for d in datas if d["Status"] == "Operational")
+    op = 0
+    for d in datas:
+        if d["Status"] == "Operational":
+            op += 1
     perc = op / tot * 100
     print(f"Reattori operativi: {op}/{tot} ({perc:.2f}%)")
 
@@ -47,7 +50,7 @@ def cerca_per_id(datas):
     id_cercato = input("Inserisci ID del reattore: ")
     for d in datas:
         if str(d["Id"]) == id_cercato:
-            print(json.dumps(d, indent=2))
+            print(d)
             return
     print("Reattore non trovato.")
 
@@ -66,8 +69,13 @@ def mappa_operativi(datas):
     print("Operative:", len(operativi))
     print("Non operative:", len(nonOperativi))
 
-    avg_lat = sum(d["Latitude"] for d in operativi) / len(operativi)
-    avg_lon = sum(d["Longitude"] for d in operativi) / len(operativi)
+    sum_lat = 0
+    sum_lon = 0
+    for d in operativi:
+        sum_lat += d["Latitude"]
+        sum_lon += d["Longitude"]
+    avg_lat = sum_lat / len(operativi)
+    avg_lon = sum_lon / len(operativi)
 
     m = folium.Map(location=[avg_lat, avg_lon], zoom_start=2)
 
