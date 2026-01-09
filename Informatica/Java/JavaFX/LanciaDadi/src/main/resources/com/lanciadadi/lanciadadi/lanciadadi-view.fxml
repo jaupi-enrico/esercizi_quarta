@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="272.0" prefWidth="332.0" spacing="20.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lanciadadi.lanciadadi.LanciaDadiController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Label fx:id="lblLancio" text="0" textAlignment="CENTER">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="Tipo di dado">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#setType6" text="6" />
+            <Button mnemonicParsing="false" onAction="#setType10" text="10">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin></Button>
+            <Button mnemonicParsing="false" onAction="#setType20" text="20" />
+            <Label fx:id="lblTypeDadi" text="6">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="Numero di dadi">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#setNDado1" text="1">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#setNDado2" text="2">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#setNDado3" text="3">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblNDadi" text="1">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#lancia" text="Button">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</VBox>
