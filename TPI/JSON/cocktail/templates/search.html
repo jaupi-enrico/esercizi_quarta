@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Risultati Cocktail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .drink {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 20px;
+        }
+        img {
+            width: 200px;
+            border-radius: 10px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align:center;">Cocktail trovati</h1>
+
+{% if drinks %}
+    {% for drink in drinks.drinks %}
+        <div class="drink">
+            <div>
+                <img src="{{ drink.strDrinkThumb }}" alt="{{ drink.strDrink }}">
+            </div>
+
+            <div>
+                <h2>{{ drink.strDrink }}</h2>
+
+                <p><strong>Categoria:</strong> {{ drink.strCategory }}</p>
+                <p><strong>Alcolico:</strong> {{ drink.strAlcoholic }}</p>
+                <p><strong>Bicchiere:</strong> {{ drink.strGlass }}</p>
+
+                <h3>Ingredienti</h3>
+                <ul>
+                    {% for i in range(1, 16) %}
+                        {% set ing = drink["strIngredient" ~ i] %}
+                        {% set meas = drink["strMeasure" ~ i] %}
+                        {% if ing %}
+                            <li>
+                                {{ ing }}
+                                {% if meas %}
+                                    - {{ meas }}
+                                {% endif %}
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+
+                <h3>Istruzioni</h3>
+                <p>
+                    {{ drink.strInstructions
+                       or "Istruzioni non disponibili" }}
+                </p>
+            </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <p style="text-align:center;">Nessun cocktail trovato.</p>
+{% endif %}
+
+</body>
+</html>

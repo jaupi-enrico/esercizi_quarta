@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Risultati Cocktail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .ingredient {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 20px;
+        }
+        img {
+            width: 200px;
+            border-radius: 10px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align:center;">Ingredienti trovati</h1>
+
+{% if ingredients %}
+    {% for ingredient in ingredients.ingredients %}
+        <div class="ingredient">
+            <div>
+                <h2>{{ ingredient.strIngredient }}</h2>
+
+                <p><strong>Categoria:</strong> {{ ingredient.strType }}</p>
+                <p><strong>Alcolico:</strong> {{ ingredient.strAlcohol }}</p>
+
+                <h3>Descrizione</h3>
+                <p>
+                    {{ ingredient.strDescription or "Istruzioni non disponibili" }}
+                </p>
+            </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <p style="text-align:center;">Nessun ingrediente trovato.</p>
+{% endif %}
+
+</body>
+</html>
