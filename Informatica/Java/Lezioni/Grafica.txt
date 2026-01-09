@@ -15,3 +15,11 @@ metti:
 	</proxies>
 </settings>
 5)Installa scenebuilder
+
+
+Impostare il progetto:
+1) nome e cartella
+2) impostare il gruppo (namespace)
+3) modifica nomi file tramite rename
+4) fra una nuova configurazione di running
+5) fai un nuovo file model

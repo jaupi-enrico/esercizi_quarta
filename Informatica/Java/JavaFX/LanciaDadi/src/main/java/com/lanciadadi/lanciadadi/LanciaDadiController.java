@@ -1,9 +1,9 @@
-package com.example.demo;
+package com.lanciadadi.lanciadadi;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class LanciaDadiController {
     @FXML
     private Label welcomeText;
 
