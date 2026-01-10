@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Cocktail DB</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        form {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        input, select, button {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .filter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .filter-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-item label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .filter-item select {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .filter-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px;
+        }
+
+        .filter-actions button {
+            padding: 12px 25px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .filter-actions button:hover {
+            background-color: #000;
+        }
+
+        .chartsContainer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .chartsContainer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        #chartsLoad {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+</head>
+<body>
+
+<h1>Cocktail Database</h1>
+
+<div class="container">
+
+    <div class="box">
+        <h2>Cerca cocktail</h2>
+        <form action="/search" method="get">
+            <input type="text" name="q" placeholder="Nome o lettera" required>
+            <button type="submit">Cerca</button>
+        </form>
+    </div>
+
+    <div class="box">
+        <h2>Cocktail casuale</h2>
+        <a class="button" href="/random">Genera cocktail random</a>
+    </div>
+
+    <div class="box">
+        <h2>Cerca per ID</h2>
+        <form action="/search/id" method="get">
+            <input type="number" name="q" placeholder="ID cocktail" required>
+            <button type="submit">Cerca</button>
+        </form>
+    </div>
+
+    <div class="box">
+        <h2>Cerca ingrediente</h2>
+        <form action="/search/ingredient" method="get">
+            <input type="text" name="q" placeholder="Nome ingrediente" required>
+            <button type="submit">Cerca</button>
+        </form>
+    </div>
+
+    <div class="box">
+        <h2>Cerca ingrediente per ID</h2>
+        <form action="/search/ingredient/id" method="get">
+            <input type="number" name="q" placeholder="ID ingrediente" required>
+            <button type="submit">Cerca</button>
+        </form>
+    </div>
+
+    <div class="box">
+        <h2>Cocktail per ingrediente</h2>
+        <form action="/search/by_ingredient" method="get">
+            <input type="text" name="q" placeholder="Es. Vodka" required>
+            <button type="submit">Cerca</button>
+        </form>
+    </div>
+
+    <div class="box">
+        <h2>Filtri</h2>
+
+        <form action="/filter" method="get" class="filter-form">
+
+            <div class="filter-item">
+                <label>Alcolico</label>
+                <select name="a">
+                    <option value="">Qualsiasi</option>
+                    {% for a in alcoholic.drinks %}
+                        <option value="{{ a.strAlcoholic }}">
+                            {{ a.strAlcoholic }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="filter-item">
+                <label>Categoria</label>
+                <select name="c">
+                    <option value="">Qualsiasi</option>
+                    {% for c in categories.drinks %}
+                        <option value="{{ c.strCategory }}">
+                            {{ c.strCategory }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="filter-item">
+                <label>Bicchiere</label>
+                <select name="g">
+                    <option value="">Qualsiasi</option>
+                    {% for g in glasses.drinks %}
+                        <option value="{{ g.strGlass }}">
+                            {{ g.strGlass }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="filter-item">
+                <label>Ingrediente</label>
+                <select name="i">
+                    <option value="">Qualsiasi</option>
+                    {% for i in ingredients.drinks %}
+                        <option value="{{ i.strIngredient1 }}">
+                            {{ i.strIngredient1 }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="filter-actions">
+                <button type="submit">Applica filtri</button>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="box">
+        <h2>Statistiche</h2>
+        <div>
+            <canvas id="statsChart"></canvas>
+            <br>
+            <div id="chartsLoad" style="text-align: center;">
+                <h3>Caricamento grafici... <span id="chartsLoadPercentage">0</span>%</h3>
+            </div>
+            <div class="chartsContainer">
+                <canvas id="alcoholicChart"></canvas>
+                <br>
+                <canvas id="categoryChart"></canvas>
+                <br>
+                <canvas id="glassChart"></canvas>
+                <br>
+                <canvas id="ingredientChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const statsData = {
+        labels: [
+            "Categorie",
+            "Bicchieri",
+            "Ingredienti",
+            "Tipi alcolici"
+        ],
+        datasets: [{
+            label: "Totali disponibili",
+            data: [
+                {{ categories.drinks | length }},
+                {{ glasses.drinks | length }},
+                {{ ingredients.drinks | length }},
+                {{ alcoholic.drinks | length }}
+            ],
+            borderWidth: 1
+        }]
+    };
+
+    const config = {
+        type: 'bar',
+        data: statsData,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        precision: 0
+                    }
+                }
+            }
+        }
+    };
+
+    new Chart(
+        document.getElementById('statsChart'),
+        config
+    );
+</script>
+<script>
+async function fetchData() {
+    let alcoholicLists = []
+    let categoryLists = []
+    let glassLists = []
+    let ingredientLists = []
+    const datas = await fetch('/stats').then(res => res.json());
+
+    datas.alcoholic.forEach(item => {
+        alcoholicLists[item.name] = item.count;
+    });
+    datas.categories.forEach(item => {
+        categoryLists[item.name] = item.count;
+    });
+    datas.glasses.forEach(item => {
+        glassLists[item.name] = item.count;
+    });
+
+    datas.ingredients.forEach(item => {
+        ingredientLists[item.name] = item.count;
+    });
+
+    const alcoholicCtx = document.getElementById('alcoholicChart').getContext('2d');
+    const categoryCtx = document.getElementById('categoryChart').getContext('2d');
+    const glassCtx = document.getElementById('glassChart').getContext('2d');
+    const ingredientCtx = document.getElementById('ingredientChart').getContext('2d');
+
+    new Chart(alcoholicCtx, {
+        type: 'pie',
+        data: {
+            labels: Object.keys(alcoholicLists),
+            datasets: [{
+                label: 'Coktails',
+                data: Object.values(alcoholicLists),
+                backgroundColor: [
+                    '#FF6384','#36A2EB','#FFCE56','#4BC0C0','#9966FF','#FF9F40'
+                ],
+            }]
+        },
+        options: {
+            responsive: true,
+        }
+    });
+
+    new Chart(categoryCtx, {
+        type: 'bar',
+        data: {
+            labels: Object.keys(categoryLists),
+            datasets: [{
+                label: 'Coktails',
+                data: Object.values(categoryLists),
+                backgroundColor: 'rgba(54, 162, 235, 0.7)',
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        precision: 0
+                    }
+                }
+            }
+        }
+    });
+
+    new Chart(glassCtx, {
+        type: 'bar',
+        data: {
+            labels: Object.keys(glassLists),
+            datasets: [{
+                label: 'Coktails',
+                data: Object.values(glassLists),
+                backgroundColor: 'rgba(255, 159, 64, 0.7)',
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        precision: 0
+                    }
+                }
+            }
+        }
+    });
+
+    new Chart(ingredientCtx, {
+        type: 'bar',
+        data: {
+            labels: Object.keys(ingredientLists),
+            datasets: [{
+                label: 'Coktails',
+                data: Object.values(ingredientLists),
+                backgroundColor: 'rgba(75, 192, 192, 0.7)',
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        precision: 0
+                    }
+                }
+            }
+        }
+    });
+
+    document.getElementById('chartsLoad').style.display = 'none';
+}
+
+fetchData();
+</script>
+<script>
+const socket = io();
+
+socket.on('update_stats', function(data) {
+    const chartsLoadPercentage = document.getElementById('chartsLoadPercentage');
+    chartsLoadPercentage.textContent = data.percentage.toFixed(2);
+});
+</script>
+</body>
+</html>

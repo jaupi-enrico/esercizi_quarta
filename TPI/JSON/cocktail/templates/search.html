@@ -34,7 +34,7 @@
 
 <h1 style="text-align:center;">Cocktail trovati</h1>
 
-{% if drinks %}
+{% if drinks.drinks %}
     {% for drink in drinks.drinks %}
         <div class="drink">
             <div>
@@ -44,9 +44,9 @@
             <div>
                 <h2>{{ drink.strDrink }}</h2>
 
-                <p><strong>Categoria:</strong> {{ drink.strCategory }}</p>
-                <p><strong>Alcolico:</strong> {{ drink.strAlcoholic }}</p>
-                <p><strong>Bicchiere:</strong> {{ drink.strGlass }}</p>
+                <p><strong>Categoria:</strong><a href="/category?q={{ drink.strCategory }}">{{ drink.strCategory }}</a></p>
+                <p><strong>Alcolico:</strong><a href="/alcoholic?q={{ drink.strAlcoholic }}">{{ drink.strAlcoholic }}</a></p>
+                <p><strong>Bicchiere:</strong><a href="/glass?q={{ drink.strGlass }}">{{ drink.strGlass }}</a></p>
 
                 <h3>Ingredienti</h3>
                 <ul>
@@ -55,7 +55,7 @@
                         {% set meas = drink["strMeasure" ~ i] %}
                         {% if ing %}
                             <li>
-                                {{ ing }}
+                                <a href="/search/ingredient?q={{ ing }}">{{ ing }}</a>
                                 {% if meas %}
                                     - {{ meas }}
                                 {% endif %}

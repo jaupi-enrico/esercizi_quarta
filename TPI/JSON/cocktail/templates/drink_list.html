@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Risultati Cocktail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .drink {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 20px;
+        }
+        img {
+            width: 200px;
+            border-radius: 10px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align:center;">Lista dei Cocktail</h1>
+
+{% if error %}
+    <p style="text-align:center; color:red;">{{ error }}</p>
+{% elif drinks != "no data found" %}
+    {% if drinks.drinks %}
+        {% for drink in drinks.drinks %}
+            <div class="drink">
+                <div>
+                    <img src="{{ drink.strDrinkThumb }}" alt="{{ drink.strDrink }}">
+                </div>
+
+                <div>
+                    <h2>{{ drink.strDrink }}</h2>
+                    <a class="button" href="/search/id?q={{ drink.idDrink }}">Dettagli</a>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p style="text-align:center;">Nessun cocktail trovato.</p>
+    {% endif %}
+{% endif %}
+
+</body>
+</html>
