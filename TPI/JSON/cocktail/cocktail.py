@@ -2,10 +2,13 @@ import time
 import requests
 from flask import Flask, jsonify, render_template, request
 from flask_socketio import SocketIO, emit
+import threading
+import os
+
 
 # Settings per il proxy con fiddler
-#os.environ["HTTP_PROXY"]  = "http://127.0.0.1:8888"
-#os.environ["HTTPS_PROXY"] = "http://127.0.0.1:8888"
+os.environ["HTTP_PROXY"]  = "http://127.0.0.1:8888"
+os.environ["HTTPS_PROXY"] = "http://127.0.0.1:8888"
 
 base_url = "https://www.thecocktaildb.com/api/json/v1/1/"
 
@@ -13,6 +16,12 @@ base_url = "https://www.thecocktaildb.com/api/json/v1/1/"
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'SalveProfCheAnalizzaIlMioCodice'
 socketio = SocketIO(app)
+
+stats = {}
+stats = {}
+stats_running = False
+stats_lock = threading.Lock()
+
 
 # Funzione per cercare cocktail per nome
 def search_name(name):
@@ -33,7 +42,6 @@ def search_cocktail_id(id):
     url = base_url + "lookup.php?i=" + id
     response = requests.get(url)
     dati = response.json()
-    print(dati)
     return dati
 
 # Funzione per cercare ingrediente per nome
@@ -313,6 +321,8 @@ def filter_route():
 def update_stats(count, total_items):
     socketio.emit('update_stats', {'percentage': count / total_items * 100})
 
+stats = {}
+
 # Funzione per ottenere le statistiche
 def get_stats():
     stats = {}
@@ -388,7 +398,6 @@ def get_stats():
 # Route per ottenere le statistiche
 @app.route("/stats")
 def stats_route():
-    stats = get_stats()
     return jsonify({
         "alcoholic": stats["alcoholic"],
         "categories": stats["categories"],
@@ -406,6 +415,23 @@ def internal_server_error(e):
 def page_not_found(e):
     return render_template("404.html"), 404
 
+def stats_worker():
+    global stats, stats_running
+
+    with stats_lock:
+        stats_running = True
+
+    try:
+        result = get_stats()
+        with stats_lock:
+            stats = result
+    finally:
+        with stats_lock:
+            stats_running = False
+
+
 # Avvio dell'applicazione
 if __name__ == "__main__":
+    thread = threading.Thread(target=stats_worker, daemon=True)
+    thread.start()
     socketio.run(app, debug=True, port=8080)
