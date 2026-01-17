@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="BOTTOM_CENTER" prefHeight="305.0" prefWidth="379.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.imparando.daditesto.DadiTestoController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="lblDadi" text="0">
+      <font>
+         <Font size="64.0" />
+      </font></Label>
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label text="Quanti dadi">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <HBox.margin>
+               <Insets right="40.0" />
+            </HBox.margin>
+         </Label>
+         <TextField fx:id="txtNumero" promptText="Numero &gt; di zero" />
+      </children>
+   </HBox>
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label text="Quante facce">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <HBox.margin>
+               <Insets right="26.0" />
+            </HBox.margin>
+         </Label>
+         <TextField fx:id="txtFacce" promptText="Numero diverso da 1" />
+      </children>
+   </HBox>
+    <Button onAction="#onLanciaButtonClick" text="Lancia">
+      <font>
+         <Font size="24.0" />
+      </font></Button>
+</VBox>

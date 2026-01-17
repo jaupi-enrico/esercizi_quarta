@@ -1,9 +1,11 @@
 package com.lanciadadi.lanciadadi;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class TazzaPerDadi {
     private Dado[] arr;
+    private ArrayList<Integer> arraylist_arr;
     private int nMax;
     private int n;
 
