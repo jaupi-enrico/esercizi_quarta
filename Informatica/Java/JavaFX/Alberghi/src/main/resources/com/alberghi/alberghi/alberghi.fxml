@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="350.0" prefWidth="465.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alberghi.alberghi.AlberghiController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+   <children>
+      <Label text="Calcolatore prezzo alberghi" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="42.0" prefWidth="161.0">
+               <children>
+                  <Label text="Seleziona albergo" />
+                  <ChoiceBox fx:id="choAlberghi" prefWidth="150.0" />
+               </children>
+            </VBox>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnRimuovi" mnemonicParsing="false" text="Rimuovi">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="btnAggiungi" mnemonicParsing="false" text="Aggiungi" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="69.0" prefWidth="248.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="261.0">
+                     <children>
+                        <Label text="Nome">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin></Label>
+                        <TextField fx:id="txtNome" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Prezzo">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin></Label>
+                        <TextField fx:id="txtPrezzo" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Button fx:id="btnConferma" alignment="CENTER_RIGHT" mnemonicParsing="false" text="Conferma" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="42.0" prefWidth="147.0">
+               <children>
+                  <Label text="Inizio" />
+                  <DatePicker fx:id="dateInizio" />
+               </children>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="42.0" prefWidth="150.0">
+               <children>
+                  <Label text="Fine" />
+                  <DatePicker fx:id="dateFine" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button fx:id="btnCalcola" mnemonicParsing="false" text="Calcola" />
+      <Label fx:id="lblPrezzo" text="Prezzo =" />
+   </children>
+</VBox>
