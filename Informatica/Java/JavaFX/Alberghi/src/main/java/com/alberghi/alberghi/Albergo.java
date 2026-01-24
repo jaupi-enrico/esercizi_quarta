@@ -1,14 +1,21 @@
 package com.alberghi.alberghi;
 
+import java.time.LocalDate;
+
 public class Albergo {
     private String nome;
-    private Double prezzo;
+    private double prezzo;
+
+    public Albergo(String nome, double prezzo) {
+        setNome(nome);
+        setPrezzo(prezzo);
+    }
 
     public String getNome() {
         return nome;
     }
 
-    public Double getPrezzo() {
+    public double getPrezzo() {
         return prezzo;
     }
 
@@ -16,16 +23,26 @@ public class Albergo {
         this.nome = nome;
     }
 
-    public void setPrezzo(Double prezzo) {
-        this.prezzo = prezzo;
-    }
-
-    public double getPrezzoGiorni(long giorni) {
-        return giorni * prezzo;
+    public void setPrezzo(double prezzo) {
+        if (prezzo < 0 ) {
+            this.prezzo = -prezzo;
+        }
+        else {
+            this.prezzo = prezzo;
+        }
     }
 
     @Override
     public String toString() {
         return nome;
+    }
+
+    public double calcolaPrezzo(LocalDate start, LocalDate end) {
+        long days = 0;
+        while (end.isAfter(start)) {
+            end = end.minusDays(1);
+            days++;
+        }
+        return getPrezzo() * days;
     }
 }
